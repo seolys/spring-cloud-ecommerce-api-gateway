@@ -24,4 +24,8 @@ spring:
           uri: lb://USER-SERVICE # LoadBalancer 서비스명
           predicates:
             - Path=/user-service/** # Path에 명시된 요청이 오면 url로 보낸다
+        - id: catalog-service
+          uri: lb://CATALOG-SERVICE
+          predicates:
+            - Path=/catalog-service/**
 
